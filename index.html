@@ -28,7 +28,62 @@
       </div>
     </div>
       <div id="about">
+      <div class="container">
+        <div class="row">
+               <div class="about-col-1">
+          <img src="images/user.png" alt="">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptatem? Voluptatem, quo, beatae perferendis, numquam excepturi mollitia omnis autem neque nisi laudantium repellat accusamus rerum inventore consectetur delectus nam. Consequatur.</p>
+          <div class="tabs-titles">
+            <p class="tabs-links  active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tabs-links" onclick="opentab('experience')">Experience</p>
+            <p class="tabs-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tabs-contents active-tab"  id="skills">
+            <ul>
+              <li><span>UI/UX</span> <br> Desgining Web and interfaces</li>
+              <li><span>Web Developement</span> <br> Web App Developement</li>
+              <li><span>App Developement</span> <br> Andriod App and IOS Developement</li>
+            </ul>
+          </div>
+               <div class="tabs-contents"  id="experience">
+            <ul>
+              <li><span>2023 Current- </span> <br> Lead Concept</li>
+              <li><span>2019</span> <br> Khyber coded</li>
+              <li><span>2018</span> <br> UI/UX Lead</li>
+            </ul>
+          </div>
+               <div class="tabs-contents " id='education'>
+            <ul>
+              <li><span>2014 </span> <br> Matric</li>
+              <li><span>2016</span> <br> Pre Engineering</li>
+              <li><span>2020</span> <br>BS Sofware Engineering</li>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+   
+      </div>
+      <script>
+        var tabsLinks = document.getElementsByClassName('tabs-links')
+        var tabsContents = document.getElementsByClassName('tabs-contents')
+        function opentab(tabname){
+          for(tablink of tabsLinks){
+          tablink.classList.remove('active-link')
+          }
+               for(tabcontent of tabsContents){
+          tabcontent.classList.remove('active-tab')
+          }
+            event.currentTarget.classList.add('active-link')
+            document.getElementById(tabname).classList.add('active-tab')
+        }
+
+      </script>
          
       </div>
+
   </body>
 </html>

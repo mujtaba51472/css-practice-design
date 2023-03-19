@@ -1,8 +1,8 @@
 # css-practice-design
 
 
-// simple html and css design
+ #simple html and css design
 
 
 
-// clone and use it 
+#clone and use it 

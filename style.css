@@ -11,6 +11,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--black);
@@ -302,9 +305,68 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  margin: 50px 0 100px 0;
 }
 
 .copyright i {
   color: #ff004f;
+}
+nav .fas {
+  display: none;
+}
+
+/* ____________media queries __________ */
+
+/* for small devices  */
+@media only screen and (max-width: 600px) {
+  #header {
+    background-image: url("images/phone-background.png");
+  }
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 13px;
+  }
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+  nav ul {
+    background-color: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    z-index: 2;
+    padding-top: 50px;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    cursor: pointer;
+  }
+  .sub-title {
+    font-size: 40px;
+    margin: 10px 0;
+  }
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .contact-left {
+    padding-left: 40px;
+  }
 }
